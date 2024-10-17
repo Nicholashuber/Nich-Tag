@@ -43,6 +43,23 @@ switch (currentSite) {
         // Append the script to the document head
         document.head.appendChild(logRocketScript);
         break;
+    case 'questworld.org':
+        console.log('Site-specific code for questworld.org');
+
+        // Dynamically load the LogRocket script
+        logRocketScript = document.createElement('script');
+        logRocketScript.src = 'https://cdn.lrkt-in.com/LogRocket.min.js';
+        logRocketScript.crossOrigin = 'anonymous';
+        logRocketScript.onload = function() {
+            // Initialize LogRocket after the script has loaded
+            if (window.LogRocket) {
+                window.LogRocket.init('h9quwk/questworld');
+            }
+        };
+
+        // Append the script to the document head
+        document.head.appendChild(logRocketScript);
+        break;
     case 'ip-fetch-saas.pages.dev':
         console.log('Site-specific code for ip-fetch-saas.pages.dev');
         // Dynamically load the LogRocket script
