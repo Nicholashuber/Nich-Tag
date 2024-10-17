@@ -11,7 +11,7 @@ let logRocketScript = null;
 
 // Conditionally display console logs and execute site-specific code
 switch (currentSite) {
-    case 'Lavasocks.com':
+    case 'lavasocks.com':
         // Dynamically load the LogRocket script
         logRocketScript = document.createElement('script');
         logRocketScript.src = 'https://cdn.lrkt-in.com/LogRocket.min.js';
