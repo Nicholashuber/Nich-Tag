@@ -7,12 +7,24 @@ console.log(`Loaded on ${currentSite}`);
 // Code that runs on all sites
 console.log('This code runs on every site.');
 // Add any universal code here
+const logRocketScript=null;
 
 // Conditionally display console logs and execute site-specific code
 switch (currentSite) {
-    case 'example.com':
-        console.log('Site-specific code for example.com');
-        // Add any code specific to example.com here
+    case 'Lavasocks.com':
+        // Dynamically load the LogRocket script
+        logRocketScript = document.createElement('script');
+        logRocketScript.src = 'https://cdn.lrkt-in.com/LogRocket.min.js';
+        logRocketScript.crossOrigin = 'anonymous';
+        logRocketScript.onload = function() {
+            // Initialize LogRocket after the script has loaded
+            if (window.LogRocket) {
+                window.LogRocket.init('h9quwk/lavasocks');
+            }
+        };
+
+        // Append the script to the document head
+        document.head.appendChild(logRocketScript);
         break;
     case 'anotherexample.com':
         console.log('Site-specific code for anotherexample.com');
@@ -21,13 +33,13 @@ switch (currentSite) {
     case 'ip-fetch-saas.pages.dev':
         console.log('Site-specific code for ip-fetch-saas.pages.dev');
         // Dynamically load the LogRocket script
-        const logRocketScript = document.createElement('script');
+        logRocketScript = document.createElement('script');
         logRocketScript.src = 'https://cdn.lrkt-in.com/LogRocket.min.js';
         logRocketScript.crossOrigin = 'anonymous';
         logRocketScript.onload = function() {
             // Initialize LogRocket after the script has loaded
             if (window.LogRocket) {
-                window.LogRocket.init('h9quwk/lavasocks');
+                window.LogRocket.init('h9quwk/ip-fetch-saas');
             }
         };
 
