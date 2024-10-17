@@ -26,9 +26,22 @@ switch (currentSite) {
         // Append the script to the document head
         document.head.appendChild(logRocketScript);
         break;
-    case 'anotherexample.com':
-        console.log('Site-specific code for anotherexample.com');
-        // Add any code specific to anotherexample.com here
+    case 'salesforcestack.com':
+        console.log('Site-specific code for salesforcestack.com');
+
+        // Dynamically load the LogRocket script
+        logRocketScript = document.createElement('script');
+        logRocketScript.src = 'https://cdn.lrkt-in.com/LogRocket.min.js';
+        logRocketScript.crossOrigin = 'anonymous';
+        logRocketScript.onload = function() {
+            // Initialize LogRocket after the script has loaded
+            if (window.LogRocket) {
+                window.LogRocket.init('h9quwk/salesforcestack');
+            }
+        };
+
+        // Append the script to the document head
+        document.head.appendChild(logRocketScript);
         break;
     case 'ip-fetch-saas.pages.dev':
         console.log('Site-specific code for ip-fetch-saas.pages.dev');
