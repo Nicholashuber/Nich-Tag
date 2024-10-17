@@ -1,6 +1,7 @@
 console.log('ayo777');
-
+console.log('ayo7777');
 // Get the hostname of the current site
+try{
 const currentSite = window.location.hostname;
 console.log(`Loaded777 on ${currentSite}`);
 // Conditionally display console logs based on the site
@@ -13,4 +14,7 @@ if (currentSite === 'example.com') {
 } else {
     console.log(`Loaded on ${currentSite}`);
     // Add default code here
+}
+}catch{
+console.log('bad');
 }
