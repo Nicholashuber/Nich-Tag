@@ -7,7 +7,7 @@ console.log(`Loaded on ${currentSite}`);
 // Code that runs on all sites
 console.log('This code runs on every site.');
 // Add any universal code here
-const logRocketScript=null;
+let logRocketScript = null;
 
 // Conditionally display console logs and execute site-specific code
 switch (currentSite) {
